@@ -1,0 +1,178 @@
+.headline{
+    margin: 0 auto;
+    font-size: 60px;
+    font-family: 'Cambay',
+        sans-serif;
+    font-family: 'Montserrat',
+        sans-serif;
+    font-family: 'Smooch',
+        cursive;
+    text-align: center;
+    font-weight: 400;
+}
+.text {
+font-size: 60px;
+font-family: 'Cambay',
+sans-serif;
+font-family: 'Montserrat',
+sans-serif;
+font-family: 'Smooch',
+cursive;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding-top: 100px;
+letter-spacing: 2px;
+   }
+.text-1{
+    display: block;
+        font-size: 80px;
+        font-family: 'Cambay',
+        sans-serif;
+        font-family: 'Montserrat',
+        sans-serif;
+        font-family: 'Smooch',
+        cursive;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        letter-spacing: 5px;
+
+}
+.louder{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px 15px;
+    font-size: 30px;
+    font-weight: 400;
+        font-family: 'Cambay',
+            sans-serif;
+        font-family: 'Montserrat',
+            sans-serif;
+        font-family: 'Smooch',
+            cursive;
+        text-align: center;
+        background-color:rgb(128, 69, 113);
+        border-radius: 7px;
+}
+
+.video{
+    margin: 20px auto;
+    margin-bottom: 0;
+    padding-bottom: 50px;
+}
+
+body {
+    background-color: rgb(177, 145, 169);
+}
+
+.demo {
+    bottom: 0;
+    height: 120px;
+    left: 0;
+    margin: auto;
+    top: 0;
+    right: 0;
+    width: 120px;
+}
+
+/* Сердце */
+#heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    margin: 0 auto;
+    animation: b 1.5s ease-in-out infinite;
+}
+
+#heart:before,
+#heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: red;
+    -moz-border-radius: 50px 50px 0 0;
+    -webkit-border-radius: 50px;
+    border-radius: 50px 50px 0 0;
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+}
+
+#heart:after {
+    left: 0;
+    -moz-box-shadow: 3px -45px 5px 3px rgba(177, 145, 169);
+    -webkit-box-shadow: 3px -45px 5px 3px rgba(177, 145, 169);
+    box-shadow: 3px -45px 5px 3px rgba(177, 145, 169);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -moz-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+}
+
+.k {
+    position: absolute;
+    top: 16px;
+    left: 55px;
+    z-index: 3;
+    width: 0px;
+    height: 0px;
+    animation: a 1.5s infinite;
+}
+
+@keyframes a {
+    0% {
+        -moz-box-shadow: 0 0 65px 15px rgba(255, 255, 255, 0.5);
+        -webkit-box-shadow: 0 0 65px 15px rgba(255, 255, 255, 0.5);
+        box-shadow: 0 0 65px 15px rgba(255, 255, 255, 0.5);
+    }
+
+    50% {
+        -moz-box-shadow: 0 0 65px 25px rgba(255, 255, 255, 0.5);
+        -webkit-box-shadow: 0 0 65px 25px rgba(255, 255, 255, 0.5);
+        box-shadow: 0 0 65px 25px rgba(255, 255, 255, 0.5);
+    }
+
+    100% {
+        -moz-box-shadow: 0 0 65px 15px rgba(255, 255, 255, 0.5);
+        -webkit-box-shadow: 0 0 65px 15px rgba(255, 255, 255, 0.5);
+        box-shadow: 0 0 65px 15px rgba(255, 255, 255, 0.5);
+    }
+}
+
+@keyframes b {
+    0% {
+        -moz-transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+
+    50% {
+        -moz-transform: scale(1.1, 1.1);
+        -ms-transform: scale(1.1, 1.1);
+        -webkit-transform: scale(1.1, 1.1);
+        transform: scale(1.1, 1.1);
+    }
+
+    100% {
+        -moz-transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+}
