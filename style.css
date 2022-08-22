@@ -1,3 +1,44 @@
+:root{
+    --animation:250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+body {
+    background-color: #b191a9;}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.text-section{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
 .headline{
     margin: 0 auto;
     font-size: 60px;
@@ -64,9 +105,7 @@ letter-spacing: 2px;
     padding-bottom: 50px;
 }
 
-body {
-    background-color: rgb(177, 145, 169);
-}
+
 
 .demo {
     bottom: 0;
@@ -175,4 +214,177 @@ body {
         -webkit-transform: scale(1, 1);
         transform: scale(1, 1);
     }
+}
+
+.img-folder{
+    margin-top: 40px;
+}
+.img-folder::before{
+    content: '';
+    display: block;
+    background-color: rgb(117, 38, 113);
+    height: 2px;
+    border-radius: 2px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.img-folder::after {
+    content: '';
+    display: block;
+    background-color: rgb(117, 38, 113);
+    height: 2px;
+    border-radius: 2px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+@keyframes img-heart {
+    0%{
+        transform: scale(1);
+    }
+    
+    100%{
+        transform: scale(0.9);
+    }   
+}
+
+.heart-img{
+    max-width: 380px;
+    width: 100%;
+    height: auto;
+    animation: img-heart 2000ms linear infinite alternate ;
+
+}
+
+.btn-open{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px auto;
+    border: none;
+    border-radius: 4px;
+    width: 200px;
+    background-color: rgb(128, 69, 113);
+    color: azure;
+    font-size: 30px;
+    font-weight: 400;
+    font-family: 'Cambay',
+        sans-serif;
+    font-family: 'Montserrat',
+        sans-serif;
+    font-family: 'Smooch',
+        cursive;
+}
+
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(142, 93, 140, 0.72);
+    transition: opacity var(--animation), visibility var(--animation) ;
+}
+.backdrop.is-hidden{
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.backdrop.is-hidden .modal{
+    transform: scale(1);
+}
+.modal{
+    max-width: 100%;
+    height: 675px;
+    margin: 20px 20px;
+    background-color:rgba(99, 38, 96, 1);
+    /* transform: translateX(-50%) scale(1.05); */
+}
+.title{
+    position: absolute;
+    z-index: 100;
+    bottom: 20%;
+    left: 12%;
+    max-width: 350px;
+    width: 100%;
+    font-size: 30px;
+    line-height: calc(50 / 30);
+    font-family: 'Cambay',
+        sans-serif;
+    font-family: 'Montserrat',
+        sans-serif;
+    font-family: 'Smooch',
+        cursive;
+}
+.add-title{
+    font-size: 40px;
+    font-weight: bold;
+}
+.close-btn{
+    z-index: 10000;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        border: none;
+        border-radius: 5px;
+        width: 200px;
+        background-color: rgb(128, 69, 113);
+        color: azure;
+        font-size: 30px;
+        font-weight: 400;
+        font-family: 'Cambay',
+            sans-serif;
+        font-family: 'Montserrat',
+            sans-serif;
+        font-family: 'Smooch',
+            cursive;
+            transition: background-color var(--animation);
+}
+.close-btn:hover,
+.close-btn:focus{
+    background-color: #5E3754;
+}
+
+.img-list__picture{
+    position: relative;
+    z-index: 1000;
+    transition: transform calc(0.2s * var(--speed)) ease, opacity var(--animation);
+    transform: translateX(0%);
+        
+}
+.hide-img{
+    opacity: 0;
+    transform: translateX(-120%);
+}
+.btn-start{
+    position: absolute;
+        bottom: 45px;
+        right: calc(50% / 2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        border-radius: 5px;
+        width: 200px;
+        background-color: rgb(128, 69, 113);
+        color: azure;
+        font-size: 30px;
+        line-height: calc(45 / 30);
+        font-weight: 400;
+        font-family: 'Cambay',
+            sans-serif;
+        font-family: 'Montserrat',
+            sans-serif;
+        font-family: 'Smooch',
+            cursive;
+        transition: background-color var(--animation);
+}
+.btn-start:hover,
+.btn-start:focus{
+    background-color: #5E3754;
 }
